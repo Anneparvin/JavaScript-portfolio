@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio-basics</title>
+    <link rel="stylesheet" href="style.css">
+      <!-- Include Email.js Library -->
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+       <!-- Include Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <img src="./assets/favicon/logo-removebg-preview.png" alt="">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+        </ul>
+        <button onclick="changeColor()">Change Color</button>
+    </header>
+
+    <!--Introduction section  -->
+    <section class="flex-container">
+        <div class="text-container">
+            <h2>Front End Developer</h2>
+            <p>Hi, I am <br/> <span>Forida Parven</span></p>
+            <p>I am from Bangladesh</p>
+        </div>
+        <div class="image-container">
+            <img src="./assets/portfolio/anne-removebg-preview (3).png" alt="Image">
+        </div>
+    </section>
+
+    <!-- about section -->
+    <header>
+        <h1>About Me</h1>
+    </header>
+
+    <nav>
+        <a onclick="showTab('section1')" class="active">Section 1</a>
+        <a onclick="showTab('section2')">Section 2</a>
+        <a onclick="showTab('section3')">Section 3</a>
+    </nav>
+
+    <section id="section1" class="tab-content flex-side active">
+        <div class="text-side">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>MongoDB</li>
+            </ul>
+        </div>
+        <div class="image-side">
+            <img src="./assets/portfolio/1.jpg" alt="Image 1">
+        </div>
+    </section>
+
+    <section id="section2" class="tab-content flex-side">
+        <div class="text-side">
+            <h2>Experience</h2>
+           <ul>
+            <li>Internship from WELLDIV In Bangladesh</li>
+            <li>Internship as a sales organiser at Suvida Foundation In Bangladesh</li>
+            
+           </ul>
+        </div>
+        <div class="image-side">
+            <img src="./assets/portfolio/experience.jpeg" alt="Image 2">
+        </div>
+    </section>
+
+    <section id="section3" class="tab-content flex-side">
+        <div class="text-side">
+            <h2>Education</h2>
+            <ul>
+                <li>MSS from National University of Bangladesh</li>
+                <li>Web Development course from Programminh Hero</li>
+                <li>Bangladesh Jubo Unnayan Academy computer Science</li>
+            </ul>
+        </div>
+        <div class="image-side">
+            <img src="./assets/portfolio/education.jpeg" alt="Image 3">
+        </div>
+    </section>
+
+    <!-- services -->
+    <header>
+        <h1>Our Services</h1>
+    </header>
+
+    <div class="services-container">
+        <div class="service-card">
+            <i class="fas fa-code service-icon"></i>
+            <h2 class="service-title">Web Development</h2>
+            <p class="service-description">We create modern and responsive websites tailored to your needs.We create modern and responsive websites</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-paint-brush service-icon"></i>
+            <h2 class="service-title">Graphic Design</h2>
+            <p class="service-description">Our designers craft visually appealing graphics and illustrations.We create modern and responsive websites.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fas fa-cogs service-icon"></i>
+            <h2 class="service-title">Custom Solutions</h2>
+            <p class="service-description">We provide personalized solutions to meet your unique requirements We create modern and responsive websites.</p>
+        </div>
+    </div>
+
+    <!-- work -->
+    <header>
+        <h1>Our Work</h1>
+    </header>
+
+    <div class="work-container">
+        <div class="work-card">
+            <img src="./assets/portfolio/web1.jpeg" alt="Work Image 1" class="work-image">
+            <div class="work-overlay">
+                <h2 class="work-title">MERN Stack Developer</h2>
+                <p class="work-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <img src="./assets/portfolio/web2.jpeg" alt="Work Image 2" class="work-image">
+            <div class="work-overlay">
+                <h2 class="work-title">FullStack Developer</h2>
+                <p class="work-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <img src="./assets/portfolio/web3.jpeg" alt="Work Image 3" class="work-image">
+            <div class="work-overlay">
+                <h2 class="work-title">UI/UX Design</h2>
+                <p class="work-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact -->
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="button" onclick="sendEmail()">Send Message</button>
+    </form>
+
+    <!-- footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#" class="social-link" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-link" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <!-- Add more social links as needed -->
+        </div>
+
+        <div class="contact-info">
+            <p>Email: contact@example.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+            <!-- Add more contact information as needed -->
+        </div>
+    </footer>
+
+    <script>
+        function changeColor() {
+            const header = document.querySelector('header');
+            header.style.backgroundColor = getRandomColor();
+        }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function showTab(tabId) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show the selected tab
+            const selectedTab = document.getElementById(tabId);
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+            }
+
+            // Update active link
+            const activeLink = document.querySelector('.active');
+            activeLink.classList.remove('active');
+            event.target.classList.add('active');
+        }
+
+        emailjs.init("sZ7hkSlbg8Od0Wklx"); // Replace with your Email.js User ID
+
+        function sendEmail() {
+            const form = document.getElementById('contact-form');
+
+            emailjs.sendForm("service_zthtsq9", "template_awry2g5", form)
+                .then(function(response) {
+                    console.log('Sent successfuly:', response);
+                    alert('Message sent successfully!');
+                    form.reset();
+                }, function(error) {
+                    console.log('Failed to send:', error);
+                    alert('Message failed to send. Please try again later.');
+                });
+        }
+    </script>
+ 
+</body>
+</html>
